@@ -1,13 +1,13 @@
 # Setup
-title:        myBlog
-tagline:      A responsive theme for your project on GitHub Pages
-baseurl:      ""
-paginate:     1
+title: myBlog
+tagline: A responsive theme for your project on GitHub Pages
+baseurl: ""
+paginate: 1
 
 # About/contact
-author:       ppoasdd
-  name:       Author name
-  url:        http://yourhomepage.com 
+author: ppoasdd
+name: ppoasdd
+url: http://yourhomepage.com 
 
 # Gems
 gems:
