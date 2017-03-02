@@ -18,7 +18,7 @@ print_hi('Tom')
 
 including Image
 
-![My helpful screenshot]({{ site.url }}/assets/images/fig5.png)
+![My helpful screenshot]({{ site.url }}/assets/images/5.png)
 
 
 download pdf file
