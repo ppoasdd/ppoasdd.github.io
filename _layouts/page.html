@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% if page.comments %} • <a href="https://ppoasdd.github.io{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
 {{ content }}
 
 {% include disqus.html %}
