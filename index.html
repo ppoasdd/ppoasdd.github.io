@@ -9,7 +9,7 @@ title: {{ site.name }}
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}
               <a href="https://ppoasdd.github.io{{ post.url }}#disqus_thread">0 Comments</a>
-              {{ post.url }}#
+              {{ post.url }}
           </span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
