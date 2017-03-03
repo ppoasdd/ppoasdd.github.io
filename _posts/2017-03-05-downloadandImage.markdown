@@ -6,18 +6,6 @@ comments: true
 categories: main
 ---
 
-Go to [naver][naver]
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-including Image 
-[My helpful screenshot]({{ site.url }}/assets/images/fig5.png)
-
 img embedding using kramdown style
 ![My helpful screenshot]({{ site.url }}/assets/images/fig5.png){:class="img-responsive"}
 
