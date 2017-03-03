@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "add comments"
 date:   2017-03-02 17:50:00
 comments: true
