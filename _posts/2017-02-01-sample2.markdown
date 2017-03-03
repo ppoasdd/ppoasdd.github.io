@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Go to naver-hyperlink"
 date:   2017-02-01 17:50:00
 comments: true
