@@ -24,13 +24,20 @@ img embedding using kramdown style
 img embedding using html style code.
 <img src="{{ site.url }}/assets/images/fig5.png">
 
-download pdf file
+download pdf file.
 
 [Get the PDF]({{ site.url }}/assets/pdfs/test.pdf)
 
-[Get the PDF]({{ site.url }}/assets/pdfs/test.pdf)
+kramdown style. 
+![Get the PDF]({{ site.url }}/assets/pdfs/test.pdf)
+
+from stackoverflow
+[download link][1]
+
+
 {% include disqus.html %}
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
-[naver]: http://www.naver.com/
+[naver]: http://www.naver.com/1
+[1]: {{site.url}}/assets/pdfs/test.pdf
