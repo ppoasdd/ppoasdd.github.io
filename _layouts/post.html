@@ -2,12 +2,10 @@
 layout: default
 ---
 
-{{ page.title }}
+<h2>{{ page.title }}</h2>
 
-<h2>{{ post.title }}</h2>
-
-<p class="meta">{{ post.date }}
-    {% if post.comments %} • <a href="https://ppoasdd.github.io{{ post.url }}#disqus_thread">0 Comments</a>{% endif %}
+<p class="meta">{{ page.date }}
+    {% if page.comments %} • <a href="https://ppoasdd.github.io{{ post.url }}#disqus_thread">0 Comments</a>{% endif %}
 </p>
 
 {{ content }}
