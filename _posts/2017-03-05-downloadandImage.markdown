@@ -25,6 +25,8 @@ download pdf file
 
 [Get the PDF]({{ site.url }}/assets/pdfs/test.pdf)
 
+![Get the PDF]({{ site.url }}/assets/pdfs/test.pdf){:class="img-responsive"}
+
 {% include disqus.html %}
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
