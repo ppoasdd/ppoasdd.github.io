@@ -35,7 +35,7 @@ from stackoverflow
 [download link][1]
 
 download a file
-![Get the file]({{ site.url }}/assets/file/gp.pyc)
+[Get the file]({{ site.url }}/assets/file/gp.pyc)
 
 {% include disqus.html %}
 
