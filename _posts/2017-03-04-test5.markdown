@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "test2 for page.html"
 date:   2017-03-05 17:50:00
 comments: true
@@ -50,8 +50,6 @@ a
 
 a
 a
-
-{% include disqus.html %}
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com

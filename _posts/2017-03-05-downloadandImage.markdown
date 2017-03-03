@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "test2 for page.html"
 date:   2017-03-05 17:50:00
 comments: true
@@ -24,8 +24,6 @@ from stackoverflow
 
 download a file
 [Get the file]({{ site.url }}/assets/file/gp.pyc)
-
-{% include disqus.html %}
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
