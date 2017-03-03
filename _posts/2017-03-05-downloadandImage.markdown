@@ -15,18 +15,20 @@ end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
-
-including Image
-
+including Image 
 [My helpful screenshot]({{ site.url }}/assets/images/fig5.png)
 
+img embedding using kramdown style
+![My helpful screenshot]({{ site.url }}/assets/images/fig5.png){:class="img-responsive"}
+
+img embedding using html style code.
+<img src="{{ site.url }}/assets/images/fig5.png">
 
 download pdf file
 
 [Get the PDF]({{ site.url }}/assets/pdfs/test.pdf)
 
-![Get the PDF]({{ site.url }}/assets/pdfs/test.pdf){:class="img-responsive"}
-
+[Get the PDF]({{ site.url }}/assets/pdfs/test.pdf)
 {% include disqus.html %}
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
