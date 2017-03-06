@@ -3,39 +3,41 @@
   
   {% include head.html %}
   <body>
-    {% include page-header.html %}
 	<script>
-      function login() {
-        // Log the user in via Twitter
-        var provider = new firebase.auth.TwitterAuthProvider();
-        firebase.auth().signInWithPopup(provider).catch(function(error) {
-          console.log("Error authenticating user:", error);
-        });
-      }
+	  function login() {
+		// Log the user in via Twitter
+		var provider = new firebase.auth.TwitterAuthProvider();
+		firebase.auth().signInWithPopup(provider).catch(function(error) {
+		  console.log("Error authenticating user:", error);
+		});
+	  }
 
-      firebase.auth().onAuthStateChanged(function(user) {
-        // Once authenticated, instantiate Firechat with the logged in user
-        if (user) {
-          initChat(user);
-        }
-      });
+	  firebase.auth().onAuthStateChanged(function(user) {
+		// Once authenticated, instantiate Firechat with the logged in user
+		if (user) {
+		  initChat(user);
+		}
+	  });
+	</script>
 
-      function initChat(user) {
-        // Get a Firebase Database ref
-        var chatRef = firebase.database().ref("chat");
+	<button onclick="login()">Login with Twitter</button>
 
-        // Create a Firechat instance
-        var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
+    <script>
+	  function initChat(user) {
+		// Get a Firebase Database ref
+		var chatRef = firebase.database().ref("chat");
 
-        // Set the Firechat user
-        chat.setUser(user.uid, user.displayName);
-      }
-    </script>
+		// Create a Firechat instance
+		var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
 
-    <div id="firechat-wrapper">
-      <button onclick="login('twitter');">Login with Twitter</button>
-    </div>
+		// Set the Firechat user
+		chat.setUser(user.uid, user.displayName);
+	  }
+	</script>
 
+	<div id="firechat-wrapper"></div>	
+
+    {% include page-header.html %}
     <section class="main-content">
       
       {{ content }}
