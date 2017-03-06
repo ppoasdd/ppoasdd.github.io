@@ -20,8 +20,6 @@
 	  });
 	</script>
 
-	<button onclick="login()">Login with Twitter</button>
-
     <script>
 	  function initChat(user) {
 		// Get a Firebase Database ref
@@ -35,7 +33,10 @@
 	  }
 	</script>
 
-	<div id="firechat-wrapper"></div>	
+	<div id="firechat-wrapper">
+        <button onclick="login()">Login with Twitter</button>
+    </div>	
+
 
     {% include page-header.html %}
     <section class="main-content">
