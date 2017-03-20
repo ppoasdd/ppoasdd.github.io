@@ -8,7 +8,6 @@ categories: main
 
 ## Box Counting Method를 이용한 Fractal 차원의 계산 및 실제 데이터 분석 사례 - MIAS 데이터 베이스를 활용한 종양 진단.
 
-2015021232 이범영, 2016-06-13 
 
 ##### 1. 도입
 
