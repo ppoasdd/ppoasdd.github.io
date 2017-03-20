@@ -24,6 +24,7 @@ Box Counting Method 다음과 같이 정의한다. [3]
 <!--
 ![title](img/figure1.png)
 -->
+<img src="{{ site.url }}/assets/images/HausdorffMIAS/figure1.png">
 
 $\epsilon$의 길이를 갖는 $\mathbb{R}^{n}$의 큐브를 이용해서 S를 덮을 때, 그 갯수와 $\epsilon$의 비를 의미하는 값이다. 여기서 S는 유클리드 공간 $\mathbb{R}^{n}$의 부분집합이며, 차원을 계산하려는 대상이다.  $N(\epsilon)$은 큐브의 갯수를 의미한다.
 
@@ -133,26 +134,31 @@ MIAS 데이터 베이스는 연구목적으로 공개된 mammography(유방촬�
  [5]가 이 사진들을 분석한 과정을 간략하게 소개한다. 우선 mini-MIAS에 있는 이미지에서 종양이 있는 이미지를 선정한다. 그리고 noise가 많이 있는 상태로 분류할 수 있는 이미지(석회화가 일어난 경우 등)를 걸러낸다. 그렇게 해서 얻어낸 11개의 양성 종양 사진과 15개의 악성 종양 사진들의 fratal dimesnion를 계산한다. fractal dimension을 구하기 위하여 가장 처음으로 이미지의 전처리를 하는데 그 전체적인 흐름은 다음과 같다.
 
 1. 이미지에서 종양을 도드라지게 하기 위해서 Equalize한다. 아래의 왼쪽 그림이 원본, 오른쪽이 equalize한 사진이다.
-
+<!--
 ![title](img/figure2.png)
+-->
+<img src="{{ site.url }}/assets/images/HausdorffMIAS/figure2.png">
 
 2.이미지의 각 pixel이 하얀색과 검정색만을 가지도록 binary image 형태로 바꾼다. Area of Interest, 즉 종양이 있는 부위를 선정한다.
 
 <!--
 ![title](img/figure3.png)
 -->
+<img src="{{ site.url }}/assets/images/HausdorffMIAS/figure3.png">
 
 3.Segmented된 이미지의 Outline만을 추출해 낸다.[6]
 
 <!--
 ![title](img/figure5.png)
 -->
+<img src="{{ site.url }}/assets/images/HausdorffMIAS/figure5.png">
 
 위와 같이 전처리한 데이터들의 Fractal dimension을 구한 결과물이 아래의 표이다.
 
 <!--
 ![title](img/figure6.png)
 -->
+<img src="{{ site.url }}/assets/images/HausdorffMIAS/figure6.png">
 
 표를 보면 악성인 경우 대부분 fractal dimension 값이 상대적으로 양성인 경우에 비해서 높게 나왔다는 것을 확인 할 수 있다.
 
@@ -200,6 +206,7 @@ MIAS 데이터 베이스는 연구목적으로 공개된 mammography(유방촬�
 <!--
 ![title](img/table1.png)
 -->
+<img src="{{ site.url }}/assets/images/HausdorffMIAS/table1.png">
 
 Fractal Dimension 계산에 영향을 줄 수 있는 요소는 최대한 배제하기 위해 test example은 mini-MIAS[2]의 이미지중 CIRC M/B인 경우만을 선택하였다. 표의 FD 값은 box counting algorithm으로 계산한 fractal dimension 값인데 이는 데이터를 얼마만큼 가까이에서 보느냐에 따라 다르기 때문에 가깝게(FD1) 본 경우와 멀리서 본(FD2) 경우로 나누어서 계산을 하였다.
 계산을 한 결과 양성 종양과 음성 종양의 계산값이 크게 차이 나지 않는 것을 확인하였다. 물론 비교한 데이터의 수가 많지 않은 것을 고려하였을 때 섣부르게 결론짓기는 어렵겠지만,  [5],[6]과 같이 악성 종양의 경우에 조금더 불규칙한 형태의 fractal 구조가 나타난다고 말하기는 조금 무리가 있어 보인다.  
