@@ -3,41 +3,6 @@
   
   {% include head.html %}
   <body>
-	<script>
-	  function login() {
-		// Log the user in via Twitter
-		var provider = new firebase.auth.TwitterAuthProvider();
-		firebase.auth().signInWithPopup(provider).catch(function(error) {
-		  console.log("Error authenticating user:", error);
-		});
-	  }
-
-	  firebase.auth().onAuthStateChanged(function(user) {
-		// Once authenticated, instantiate Firechat with the logged in user
-		if (user) {
-		  initChat(user);
-		}
-	  });
-	</script>
-
-    <script>
-	  function initChat(user) {
-		// Get a Firebase Database ref
-		var chatRef = firebase.database().ref("chat");
-
-		// Create a Firechat instance
-		var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
-
-		// Set the Firechat user
-		chat.setUser(user.uid, user.displayName);
-	  }
-	</script>
-
-	<div id="firechat-wrapper">
-        <button onclick="login()">Login with Twitter</button>
-    </div>	
-
-
     {% include page-header.html %}
     <section class="main-content">
       
