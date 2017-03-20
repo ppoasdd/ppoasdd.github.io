@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "test2 for page.html"
+date:   2017-03-05 17:50:00
+comments: true
+categories: main
+---
+```python
+#the use of multithreads in cpus
+import theano
+theano.config.openmp= 'True'
+```
+
+
+```python
+#the use of multithreads in cpus
+import theano
+theano.config.openmp= 'False'
+```
+
+
+```python
+
+```
+
+
