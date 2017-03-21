@@ -25,7 +25,7 @@ Box Counting Method 다음과 같이 정의한다. [3]
 -->
 <img src="{{ site.url }}/assets/images/HausdorffMIAS/figure1.png">
 
-$$\epsilon$$의 길이를 갖는 $$\mathbb{R}^{n}$$의 큐브를 이용해서 S를 덮을 때, 그 갯수와 $$\epsilon$$의 비를 의미하는 값이다. 여기서 S는 유클리드 공간 $$\mathbb{R}^{n}$$의 부분집합이며, 차원을 계산하려는 대상이다.  $$N(\epsilon)$$은 큐브의 갯수를 의미한다.
+\(\epsilon\)의 길이를 갖는 $$\mathbb{R}^{n}$$의 큐브를 이용해서 S를 덮을 때, 그 갯수와 $$\epsilon$$의 비를 의미하는 값이다. 여기서 S는 유클리드 공간 $$\mathbb{R}^{n}$$의 부분집합이며, 차원을 계산하려는 대상이다.  $$N(\epsilon)$$은 큐브의 갯수를 의미한다.
 
 일반적으로 분석하고자 하는 데이터의 갯수는 유한하기 때문에 lim값을 그대로 사용하지는 않고 $$log(1/\epsilon)$$ - $$logN(\epsilon)$$ 그래프의 기울기를 $$dim_{box}(S)$$로 사용할 것이다. 이는 데이터의 차원이 데이터를 어느 정도의 스케일로 바라보느냐에 따라 달라진다는 사실을 고려하여 선정한 것이다.
 
