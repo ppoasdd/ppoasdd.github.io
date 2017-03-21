@@ -25,13 +25,15 @@ Box Counting Method 다음과 같이 정의한다. [3]
 -->
 <img src="{{ site.url }}/assets/images/HausdorffMIAS/figure1.png">
 
-$$\epsilon$$의 길이를 갖는 $\mathbb{R}^{n}$의 큐브를 이용해서 S를 덮을 때, 그 갯수와 $\epsilon$의 비를 의미하는 값이다. 여기서 S는 유클리드 공간 $\mathbb{R}^{n}$의 부분집합이며, 차원을 계산하려는 대상이다.  $N(\epsilon)$은 큐브의 갯수를 의미한다.
+$$\epsilon$$의 길이를 갖는 $$\mathbb{R}^{n}$$의 큐브를 이용해서 S를 덮을 때, 그 갯수와 $$\epsilon$$의 비를 의미하는 값이다. 여기서 S는 유클리드 공간 $$\mathbb{R}^{n}$$의 부분집합이며, 차원을 계산하려는 대상이다.  $$N(\epsilon)$$은 큐브의 갯수를 의미한다.
 
-일반적으로 분석하고자 하는 데이터의 갯수는 유한하기 때문에 lim값을 그대로 사용하지는 않고 $log(1/\epsilon)$ - $logN(\epsilon)$ 그래프의 기울기를 $dim_{box}(S)$로 사용할 것이다. 이는 데이터의 차원이 데이터를 어느 정도의 스케일로 바라보느냐에 따라 달라진다는 사실을 고려하여 선정한 것이다.
+일반적으로 분석하고자 하는 데이터의 갯수는 유한하기 때문에 lim값을 그대로 사용하지는 않고 $$log(1/\epsilon)$$ - $$logN(\epsilon)$$ 그래프의 기울기를 $$dim_{box}(S)$$로 사용할 것이다. 이는 데이터의 차원이 데이터를 어느 정도의 스케일로 바라보느냐에 따라 달라진다는 사실을 고려하여 선정한 것이다.
 
 아래는 Box counting method를 구현한 코드이다. Matlab R2015 b에서 작성하였다. 
+
 구현한 코드는 다음과 같이 크게 두 함수로 구성되어있다.
- * 첫번째 함수는 getIndicesFixed라는 이름으로 정의한 함수이다. S를 특정한 길이를 갖는 cube로 잘랐을 때, 각각의 데이터 셋에 들어있는 데이터가 어느 cube에 속해있는지 알아내는 함수이다. 행렬형태로 표현한 dataset의 형태(shape)는 데이터의 갯수* 데이터 feature의 갯수로 표현되어야 한다. 분석하고자 하는 dataset, 데이터 feature의 갯수, 데이터가 퍼져있는 범위(range), $\epsilon$(cube의 한변 길이)을 입력변수로 받아서 각 데이터가 속해있는 cube의 인덱스를 행으로 갖는 행렬을 내보낸다.
+ * 첫번째 함수는 getIndicesFixed라는 이름으로 정의한 함수이다. S를 특정한 길이를 갖는 cube로 잘랐을 때, 각각의 데이터 셋에 들어있는 데이터가 어느 cube에 속해있는지 알아내는 함수이다. 행렬형태로 표현한 dataset의 형태(shape)는 데이터의 갯수* 데이터 feature의 갯수로 표현되어야 한다. 분석하고자 하는 dataset, 데이터 feature의 갯수, 데이터가 퍼져있는 범위(range), $$\epsilon$$(cube의 한변 길이)을 입력변수로 받아서 각 데이터가 속해있는 cube의 인덱스를 행으로 갖는 행렬을 내보낸다.
+
 
 ```
 function indicesSet=getIndicesFixed(dataset,dim,range,interval)
@@ -68,7 +70,7 @@ function indicesSet=getIndicesFixed(dataset,dim,range,interval)
 end
 ```
 
- * 두번째 함수는 plotDimByHausDim라는 이름으로 정의하였다. 이 함수는 $log(1/\epsilon)$ - $logN(\epsilon)$ 그래프를 그린다. 입력변수는 getIndicesFixed함수와 비슷하며 interval 대신에 domain을 사용한다. 여기서 domain은 $\epsilon$값들의 집합이다.
+ * 두번째 함수는 plotDimByHausDim라는 이름으로 정의하였다. 이 함수는 $$log(1/\epsilon)$$ - $$logN(\epsilon)$$ 그래프를 그린다. 입력변수는 getIndicesFixed함수와 비슷하며 interval 대신에 domain을 사용한다. 여기서 domain은 $$\epsilon$$값들의 집합이다.
 
 ```
 function [x,y]=plotDimByHausDim(dataset,dim,range,domain)
@@ -177,7 +179,7 @@ MIAS 데이터 베이스는 연구목적으로 공개된 mammography(유방촬�
 -->
 <img src="{{ site.url }}/assets/images/HausdorffMIAS/figure9.png">
 
-아래의 그림은 mdb028의 $log(1/\epsilon)$ - $logN(\epsilon)$ 그래프이다.
+아래의 그림은 mdb028의 $$log(1/\epsilon)$$ - $$logN(\epsilon)$$ 그래프이다.
 
 <!--
 ![title](img/figure10.png)
@@ -192,7 +194,7 @@ MIAS 데이터 베이스는 연구목적으로 공개된 mammography(유방촬�
 <img src="{{ site.url }}/assets/images/HausdorffMIAS/figure8.png">
 
 
-아래의 그림은 mdb069의 $log(1/\epsilon)$ - $logN(\epsilon)$ 그래프이다.
+아래의 그림은 mdb069의 $$log(1/\epsilon)$$ - $$logN(\epsilon)$$ 그래프이다.
 
 <!--
 ![title](img/figure11.png)
